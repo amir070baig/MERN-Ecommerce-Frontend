@@ -7,6 +7,7 @@ import ProductDetails from "./pages/ProductDetails";
 import OrderHistory from "./pages/OrderHistory";
 import ProductForm from "./pages/admin/ProductForm";
 import AdminRoute from "./pages/AdminRoute";
+import ManageProducts from "./pages/admin/ManageProducts";
 
 const Home = () => (
   <div className="text-center mt-10">
