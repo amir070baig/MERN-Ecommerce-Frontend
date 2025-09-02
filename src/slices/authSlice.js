@@ -15,7 +15,7 @@ export const registerUser = createAsyncThunk(
   async (userData, thunkAPI) => {  // 🔹 Async function (payload creator). userData = data from form, thunkAPI = helper object
     try {
       // Make POST request to backend with user data
-      const res = await axios.post(`${API_BASE_URL}/register`, userData);
+      const res = await axios.post(`${API_BASE_URL}/api/register`, userData);
       return res.data;  // 🔹 On success → return data. Goes to `fulfilled`
     } catch (err) {
       // 🔹 On failure → send error message to `rejected`
@@ -31,7 +31,7 @@ export const loginUser = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       // Make POST request to backend for login
-      const res = await axios.post(`${API_BASE_URL}/login`, userData);
+      const res = await axios.post(`${API_BASE_URL}/api/login`, userData);
       return res.data;  // 🔹 On success → goes to `fulfilled`
     } catch (err) {
       // 🔹 On error → goes to `rejected`
