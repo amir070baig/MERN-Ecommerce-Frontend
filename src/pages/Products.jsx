@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../redux/features/productSlice";
+import { fetchProducts } from "../slices/productSlice";
 import { Link } from "react-router-dom";
 
 const Products = () => {
