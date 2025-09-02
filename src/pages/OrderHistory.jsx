@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMyOrders } from "../features/order/orderSlice";
+import { fetchMyOrders } from "../slices/orderSlice";
 import { Navigate } from "react-router-dom";
 
 const OrderHistory = () => {
