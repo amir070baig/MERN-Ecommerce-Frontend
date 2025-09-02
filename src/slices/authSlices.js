@@ -2,9 +2,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 // Import axios to make HTTP requests
 import axios from "axios";
+import { API_BASE_URL } from "../config";
 
 // 🌍 Base URL for backend
-const API_URL = "https://mern-ecommerce-backend-mnc3.onrender.com"; 
+// const API_URL = "https://mern-ecommerce-backend-mnc3.onrender.com"; 
 // Replace with your actual backend URL
 
 
@@ -14,7 +15,7 @@ export const registerUser = createAsyncThunk(
   async (userData, thunkAPI) => {  // 🔹 Async function (payload creator). userData = data from form, thunkAPI = helper object
     try {
       // Make POST request to backend with user data
-      const res = await axios.post(`${API_URL}/register`, userData);
+      const res = await axios.post(`${API_BASE_URL}/register`, userData);
       return res.data;  // 🔹 On success → return data. Goes to `fulfilled`
     } catch (err) {
       // 🔹 On failure → send error message to `rejected`
@@ -30,7 +31,7 @@ export const loginUser = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       // Make POST request to backend for login
-      const res = await axios.post(`${API_URL}/login`, userData);
+      const res = await axios.post(`${API_BASE_URL}/login`, userData);
       return res.data;  // 🔹 On success → goes to `fulfilled`
     } catch (err) {
       // 🔹 On error → goes to `rejected`
