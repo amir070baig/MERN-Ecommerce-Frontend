@@ -5,7 +5,7 @@ import {
   createProduct,
   updateProduct,
   fetchProductById,
-} from "../../redux/productSlice";
+} from "../../slices/productSlice";
 import { useNavigate, useParams } from "react-router-dom";
 
 const ProductForm = () => {
